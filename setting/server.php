@@ -6,8 +6,5 @@ $hostname = "localhost";
 $database = "tiket";
 $username = "cas";
 $password = "bintang";
-$connect = mysqli_connect($hostname,$username,$password,$database);
-if (!$connect) {
-	die("NO CONNECTION");
-	}
+$con = mysql_connect($hostname,$username,$password) or trigger_error(mysql_error(),E_USER_ERROR);
 ?>

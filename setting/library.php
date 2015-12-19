@@ -148,4 +148,5 @@ function _has_operator($str)
    }   
 }
 
+
 ?>
