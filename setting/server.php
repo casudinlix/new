@@ -8,7 +8,6 @@ $username = "cas";
 $password = "bintang";
 $connect = mysqli_connect($hostname,$username,$password,$database);
 if (!$connect) {
-	mysqli_report("error")
-}
-
+	die("NO CONNECTION");
+	}
 ?>
