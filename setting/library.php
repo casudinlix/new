@@ -72,5 +72,80 @@ public function insert($table,$data){
 	 }
 	 return $id;
 }
+public function delete($table,$where=array(),$type=''){
+	$sql = "DELETE FROM".$table;
+	if (!empty($where)) {
+		$sql.=$this->_where($where,$type);
+	}
+	$q =$this->query($sql);
+	$row =$this->affected_rows;
+	return $row;
+}
+public function update($table,$data,$$where=array(),$type=''){
+	$sql ="UPDATE".$table;
+	if (is_array($data)) {
+		foreach ($data as $key => $val) {
+			$vals ="'".addcslashes($val).".";
+			$param[] =$key."=".$vals;
+		}
+	}
+	$param = implode(',', $param);
+	$sql .="SET".$param;
+	if (!empty($where)) {
+		$sql .=$this->_where($where,$type);
+		$q = $this->query($sql);
+		$row =$this->affected_rows;
+		return $row;
+	}
+}
+public function get_data_by($table,$where=array(),$type=''){
+	$sql ="SELECT * FROM".$table;
+	if (!empty($where)) {
+		$sql .=$this->_where($where,$type);
+	}
+	$q =$this->query($sql);
+	$dat = array();
+	if ($q) {
+		while ($data =$q->fecth_array()) {
+			$dat[] =$data;
+		}
+	}
+	return $dat;
+}
+function _has_operator($str)
+ {
+            $str = trim($str);
+            if ( ! preg_match("/(\s|<|>|!|=|is null|is not null)/i", $str))
+            {
+                    return FALSE;
+            }
+            return TRUE;
+ }
+   function _where($where,$type=''){
+       $sql = " WHERE ";
+       if(is_array($where)){           
+           foreach ($where as $k=>$v){
+               if(!is_integer($v)){
+                   $v = "'".addslashes($v)."'";
+               }
+               if(!$this->_has_operator($k)){
+                   $k .= "=";
+               }
+               $val[]=$k.$v;               
+           }
+           if(count($val)>1){
+               if(empty($type)){
+                   $type = "AND";
+               }
+               $val = implode(" ".$type." ", $val);
+           }
+           else {
+               $val = implode("", $val);
+           }
+       }
+       $sql .= $val;
+       return $sql;
+   }   
+}
 
 ?>
