@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rskelas" value="name:kelasID;datatype:int,name:kelasNama;datatype:string" />
+	<infoitem key="UD_rska" value="name:KAID;datatype:int,name:KANama;datatype:string" />
+	<infoitem key="UD_rspembayaran" value="name:pembayaranID;datatype:int,name:jenisPembayaran;datatype:string" />
+	<infoitem key="UD_rsstasiun" value="name:stasiunID;datatype:int,name:stasiunNama;datatype:string" />
+	<infoitem key="UD_rstrayek" value="name:trayekID;datatype:int,name:trayekName;datatype:string" />
+	<infoitem key="UD_rsjadwal" value="name:jadwalID;datatype:int,name:KAID;datatype:int,name:stasiunID;datatype:int,name:StasiunID1;datatype:int,name:kelasID;datatype:int,name:Harga;datatype:string,name:Jam;datatype:time,name:KANama;datatype:string,name:kelasNama;datatype:string,name:stasiunNama;datatype:string,name:stasiunNama1;datatype:string" />
+	<infoitem key="UD_rsjumlah" value="name:jumlahID;datatype:int,name:jumlahNama;datatype:real" />
+	<infoitem key="UD_rsreservasi" value="name:reservasiID;datatype:int,name:nama;datatype:string,name:no_identitas;datatype:string,name:identitasID;datatype:int,name:no_telp;datatype:string,name:email;datatype:string,name:jadwalID;datatype:int,name:KAID;datatype:int,name:KAID;datatype:int,name:stasiunID;datatype:int,name:stasiunID1;datatype:int,name:pembayaranID;datatype:int,name:pemilik;datatype:string,name:bankID;datatype:int,name:rekening;datatype:string,name:jumlahID;datatype:int,name:tanggal_berangkat;datatype:date,name:Harga;datatype:string,name:Jam;datatype:time,name:KANama;datatype:string,name:jenisPembayaran;datatype:string,name:stasiunNama;datatype:string,name:stasiunNama1;datatype:string,name:jenisID;datatype:string,name:bankNama;datatype:string,name:jumlahNama;datatype:real" />
+	<infoitem key="UD_rsstasuin1" value="name:stasiunID1;datatype:int,name:stasiunNama1;datatype:string" />
+	<infoitem key="UD_rsidentitas" value="name:identitasID;datatype:int,name:jenisID;datatype:string" />
+	<infoitem key="UD_rsbank" value="name:bankID;datatype:int,name:bankNama;datatype:string" />
+</info>

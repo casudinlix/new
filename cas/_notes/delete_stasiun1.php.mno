@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsstasuin1" value="name:stasiunID1;datatype:int,name:stasiunNama1;datatype:string" />
+</info>

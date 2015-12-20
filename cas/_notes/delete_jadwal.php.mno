@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsjadwal" value="name:jadwalID;datatype:int,name:KAID;datatype:int,name:stasiunID;datatype:int,name:StasiunID1;datatype:int,name:kelasID;datatype:int,name:Harga;datatype:string,name:Jam;datatype:time,name:KANama;datatype:string,name:kelasNama;datatype:string,name:stasiunNama;datatype:string,name:stasiunNama1;datatype:string" />
+</info>
